@@ -22,6 +22,7 @@
 <script> 
 
     export default {
+        // 不能直接在这里面改变props的数据
         props:["w"],
         data(){
             return{
@@ -34,7 +35,7 @@
                 // 触发父组件中的close函数
                 this.$emit("close");
                 // 触发事件的方式为点击
-                trigger("click");
+                
             }
         }
 

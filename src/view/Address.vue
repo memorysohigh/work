@@ -78,7 +78,7 @@
               </li>
 
 
-              <li class="addr-new">
+              <li class="addr-new" @click="isAddAddress=true">
                 <div class="add-new-inner">
                   <svg class="icon icon-add">
                     <use xlink:href="#icon-add" />
@@ -109,6 +109,18 @@
 
       </div>
     </div>
+   
+    <mo :w="isAddAddress" @close="closeMo">
+      <div slot="message">
+        收件人:<input type="text" v-model="userName"><br>
+        地  址：<input type="text" v-model="streetName"><br>
+        电  话：<input type="text" v-model="tel" @keyup.enter="addAddress">
+      </div>
+      <div slot="btnGroup">
+        <a href="javascript:;" class="btn btn--m" @click="addAddress">确认</a>
+        <a href="javascript:;" class="btn btn--m" @click="isAddAddress = false">取消</a>
+      </div>
+    </mo>
 
     <mo :w="isMdShow" @close="closeMo">
       <p slot="message">是否删除此地址</p>
@@ -136,8 +148,11 @@ export default {
       addressList: [],
       checkIndex: 0,
       isMdShow: false,
+      isAddAddress:false,
       addressId: "",
-      
+      userName:"",
+      streetName:"",
+      tel:"",
     };
   },
   components: {
@@ -193,6 +208,7 @@ export default {
 
     closeMo() {
       this.isMdShow = false;
+      this.isAddAddress=false;
     },
 
     delAddressConfirm(addressId) {
@@ -201,9 +217,8 @@ export default {
     },
 
     delAddress() {
-      this.isMdShow = true;
-      axios
-        .post("/users/delAddress", {
+      this.isMdShow = false;
+      axios.post("/users/delAddress", {
           addressId: this.addressId
         })
         .then(response => {
@@ -216,7 +231,26 @@ export default {
             alert("删除失败");
           }
         });
-    }
+    },
+
+    addAddress(){
+      console.log(this.userName)
+      this.isAddAddress = false;
+      axios.post("/users/addAddress",{
+        userName:this.userName,
+        streetName:this.streetName,
+        tel:this.tel
+      }).then(response=>{
+        let res = response.data;
+          if (res.status == "0") {
+            this.isAddAddress = false;
+            alert("添加成功");
+            this.init();
+          } else {
+            alert("添加失败");
+          }
+      })
+    },
   }
 };
 </script>
