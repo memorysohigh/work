@@ -4,8 +4,8 @@
     <div class="nav-breadcrumb-wrap">
       <div class="container">
         <nav class="nav-breadcrumb">
-          <a href="/">Home</a>
-          <span>My Address</span>
+          <a href="/">首页</a>
+          <span>收货地址</span>
         </nav>
       </div>
     </div>
@@ -16,7 +16,7 @@
       <div class="checkout-addr">
         <div class="page-title-normal">
           <h2 class="page-title-h2">
-            <span>check out</span>
+            <span>收货地址</span>
           </h2>
         </div>
         <!-- process step -->
@@ -41,7 +41,7 @@
         <!-- address list -->
         <div class="page-title-normal checkout-title">
           <h2>
-            <span>Shipping address</span>
+            <span>收货地址</span>
           </h2>
         </div>
         <div class="addr-list-wrap">
@@ -88,18 +88,18 @@
             </ul>
           </div>
           <div class="shipping-addr-mor">
-            <a href="javascript:;" class="addr-more-btn up-down-btn" @click="expand">MORE</a>
+            <a href="javascript:;" class="addr-more-btn up-down-btn" @click="expand">展开</a>
           </div>
         </div>
 
         <!-- shipping method -->
         <div class="page-title-normal checkout-title">
           <h2>
-            <span>Shipping method</span>
+            <span>收货方式：包邮</span>
           </h2>
         </div>
         <div class="lemall-msg-info hidden">
-          <span>dasfafrrqwwre</span>
+          <span></span>
         </div>
         <div class="shipping-method-wrap">
           <div class="next-btn-wrap">

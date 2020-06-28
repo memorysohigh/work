@@ -4,8 +4,8 @@
     <div class="nav-breadcrumb-wrap">
       <div class="container">
         <nav class="nav-breadcrumb">
-          <a href="/">Home</a>
-          <span>My Cart</span>
+          <a href="/">首页</a>
+          <span>购物车</span>
         </nav>
       </div>
     </div>
@@ -13,17 +13,17 @@
     <div class="container">
       <div class="cart">
         <div class="page-title-normal">
-          <h2 class="page-title-h2"><span>My Cart</span></h2>
+          <h2 class="page-title-h2"><span>购物车</span></h2>
         </div>
         <div class="item-list-wrap">
           <div class="cart-item">
             <div class="cart-item-head">
               <ul>
-                <li>Items</li>
-                <li>Price</li>
-                <li>Quantity</li>
-                <li>Subtotal</li>
-                <li>Edit</li>
+                <li>商品名</li>
+                <li>价格</li>
+                <li>数量</li>
+                <li>小计</li>
+                <li>删除</li>
               </ul>
             </div>
             <ul class="cart-item-list">
@@ -81,16 +81,16 @@
                   <span class="checkbox-btn item-check-btn" v-bind:class="{'checked':checkedAll}">
                       <svg class="icon icon-ok"><use xlink:href="#icon-ok"/></svg>
                   </span>
-                  <span>Select all</span>
+                  <span>全选</span>
                 </a>
               </div>
             </div>
             <div class="cart-foot-r">
               <div class="item-total">
-                Item total: <span class="total-price">{{totalPrice}}万</span>
+                共计: <span class="total-price">{{totalPrice}}万</span>
               </div>
               <div class="btn-wrap">
-                <a class="btn btn--red" v-bind:class="{'btn--dis':checkedCount==0}" @click="checkOut">Checkout</a>
+                <a class="btn btn--red" v-bind:class="{'btn--dis':checkedCount==0}" @click="checkOut">确认</a>
               </div>
             </div>
           </div>

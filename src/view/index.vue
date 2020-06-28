@@ -1,13 +1,13 @@
 <template>
   <div>
     <nav-header></nav-header>
-    <div class="banner">
+    <!-- <div class="banner">
       <div class="header_arrow">
         <a href="#arrow" class="scroll">
           <span></span>
         </a>
       </div>
-    </div>
+    </div> -->
 
     <div class="main">
       <div class="container">
@@ -17,10 +17,10 @@
               <a href="#" class="b-link-stroke b-animate-go thickbox">
                 <img src="@/images/1.jpg" class="img-responsive" alt />
                 <div class="b-wrapper1 long-img">
-                  <h2 class="b-animate b-from-left b-delay03">Photo 1</h2>
+                  <h2 class="b-animate b-from-left b-delay03">侧面</h2>
                   <p
                     class="b-animate b-from-right b-delay03"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  >侧面外观，高端典雅</p>
                 </div>
               </a>
             </div>
@@ -28,20 +28,20 @@
               <a href="#" class="b-link-stroke b-animate-go thickbox">
                 <img src="@/images/pic2.jpg" class="img-responsive" alt />
                 <div class="b-wrapper1">
-                  <h2 class="b-animate b-from-left b-delay03">Photo 1</h2>
+                  <h2 class="b-animate b-from-left b-delay03">正面</h2>
                   <p
                     class="b-animate b-from-right b-delay03"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  >你可以感受到跑车文化中一贯的速度与激情，并学习更多的对艺术的诠释</p>
                 </div>
               </a>
               <div class="grid1">
                 <a href="#" class="b-link-stroke b-animate-go thickbox">
                   <img src="@/images/pic3.jpg" class="img-responsive" alt />
                   <div class="b-wrapper1">
-                    <h2 class="b-animate b-from-left b-delay03">Photo 1</h2>
+                    <h2 class="b-animate b-from-left b-delay03">尾部</h2>
                     <p
                       class="b-animate b-from-right b-delay03"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    >那汽车不大，紧凑，狭小，苗条</p>
                   </div>
                 </a>
               </div>
@@ -53,10 +53,10 @@
               <a href="#" class="b-link-stroke b-animate-go thickbox">
                 <img src="@/images/pic4.jpg" class="img-responsive" alt />
                 <div class="b-wrapper">
-                  <h2 class="b-animate b-from-left b-delay03">Photo 1</h2>
+                  <h2 class="b-animate b-from-left b-delay03">前部·内饰</h2>
                   <p
                     class="b-animate b-from-right b-delay03"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  >那汽车不大，紧凑，狭小，苗条</p>
                 </div>
               </a>
             </div>
@@ -64,10 +64,10 @@
               <a href="#" class="b-link-stroke b-animate-go thickbox">
                 <img src="@/images/pic5.jpg" class="img-responsive" alt />
                 <div class="b-wrapper">
-                  <h2 class="b-animate b-from-left b-delay03">Photo 1</h2>
+                  <h2 class="b-animate b-from-left b-delay03">整体</h2>
                   <p
                     class="b-animate b-from-right b-delay03"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  >简洁典雅的外形、豪华的内饰、尖端的技术、真切的驾驶乐趣</p>
                 </div>
               </a>
             </div>
@@ -75,10 +75,10 @@
               <a href="#" class="b-link-stroke b-animate-go thickbox">
                 <img src="@/images/pic6.jpg" class="img-responsive" alt />
                 <div class="b-wrapper">
-                  <h2 class="b-animate b-from-left b-delay03">Photo 1</h2>
+                  <h2 class="b-animate b-from-left b-delay03">完美</h2>
                   <p
                     class="b-animate b-from-right b-delay03"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  >把高尖的汽车制作技术复合在优雅线条内，这就是意大利跑车典雅的体态、永恒的流丽</p>
                 </div>
               </a>
             </div>

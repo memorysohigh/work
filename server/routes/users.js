@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+require('./../util/util')
 
 var User = require('./../models/user');
 
@@ -347,6 +348,95 @@ router.post("/delAddress", (req, res, next) => {
       })
     }
   });
-})
+});
+
+// router.post("/getOrder",(req,res,next)=>{
+//   var userId=req.cookies.userId,
+//   orderId=req.body.orderId;
+//   User.findOne({userId:userId,orderId:orderId},(err,doc)=>{
+//     if(err){
+//       res.json({
+//         status: '1',
+//         msg: err.message,
+//         result: ''
+//       })
+//     }else{
+//       console.log(doc);
+//       res.json({
+//         status: '0',
+//         msg: "",
+//         result: doc.orderList
+//       });
+//     }
+//   })
+// })
+
+// 支付订单payMent
+router.post("/payMent",(req,res,next)=>{
+  var userId=req.cookies.userId,
+  addressId = req.body.addressId,
+  orderTotal = req.body.orderTotal;
+  User.findOne({ userId : userId }, (err, doc) => {
+    if (err) {
+      res.json({
+        status: '1',
+        msg: err.message,
+        result: ''
+      })
+    } else {
+      var address = '',goodsList = [];
+      // 获取当前用户的地址信息
+      doc.addressList.forEach((item)=>{
+        if(addressId==item.addressId){
+          address = item;
+        }
+      })
+      // 获取用户购物车的购买商品
+      doc.carList.filter((item)=>{
+        if(item.checked == '1'){
+          goodsList.push(item);
+        }
+      });
+      // 生成orderId
+      var platform='622';
+      var r1 =Math.floor(Math.random()*10);
+      var r2 =Math.floor(Math.random()*10);
+
+      var sysDate = new Date().Format('yyyyMMddhhmmss');
+      var createDate =new Date().Format('yyyy-MM-dd hh:mm:ss');
+      var orderId = platform+r1+sysDate+r2;
+      console.log(createDate);
+      var order = {
+        orderId:orderId,
+        orderTotal:orderTotal,
+        addressIfo:address,
+        goodsList:goodsList,
+        orderStatus:'1',
+        createDate:createDate,
+      }
+      doc.orderList.push(order);
+      doc.save((err1,doc1)=>{
+        if(err1){
+          res.json({
+          status: '1',
+          msg: err.message,
+          result: ''
+          })
+         }else{
+          res.json({
+            status: '0',
+            msg: "",
+            result: {
+              orderId:order.orderId,
+              orderTotal:order.orderTotal,
+            }
+          });
+         }
+      })
+
+      
+    }
+  })
+});
 
 module.exports = router;

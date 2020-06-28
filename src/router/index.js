@@ -9,6 +9,7 @@ import single from '@/view/single'
 import cart from '@/view/cart'
 import Address from '@/view/Address'
 import OrderConfirm from '@/view/OrderConfirm'
+// import orderSuccess from './../view/orderSuccess'
 
 
 
@@ -61,6 +62,11 @@ export default new Router({
       name:'OrderConfirm',
       component:OrderConfirm,
     },
+    // {
+    //   path:'/orderSuccess',
+    //   name:'orderSuccess',
+    //   component:orderSuccess,
+    // },
     
   ]
 })

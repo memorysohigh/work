@@ -4,18 +4,18 @@
     <div class="nav-breadcrumb-wrap">
       <div class="container">
         <nav class="nav-breadcrumb">
-          <a href="/">Home</a>
-          <span>Goods</span>
+          <a href="/">首页</a>
+          <span>商品</span>
         </nav>
       </div>
     </div>
     <div class="accessory-result-page accessory-page">
       <div class="container">
         <div class="filter-nav">
-          <span class="sortby">Sort by:</span>
-          <a href="javascript:void(0)" class="default cur">Default</a>
+          <span class="sortby">排序:</span>
+          <a href="javascript:void(0)" class="default cur">默认</a>
           <a href="javascript:;" class="price" @click="sortgoods()">
-            Price
+            价格
           </a>
           <a href="javascript:void(0)" class="filterby stopPop">Filter by</a>
         </div>
@@ -23,9 +23,9 @@
           <!-- filter -->
           <div class="filter stopPop" id="filter">
             <dl class="filter-price">
-              <dt>Price:</dt>
+              <dt>价格:</dt>
               <dd>
-                <a href="javascript:void(0)" @click="()=>{this.priceChecked='all';this.page=1;getgoodslist()}">All</a>
+                <a href="javascript:void(0)" @click="()=>{this.priceChecked='all';this.page=1;getgoodslist()}">全部</a>
               </dd>
               <dd>
                 <a href="javascript:void(0)" @click="()=>{this.priceChecked=0;this.page=1;getgoodslist()}">0 - 100万</a>
